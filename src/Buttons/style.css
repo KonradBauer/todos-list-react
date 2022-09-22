@@ -1,0 +1,46 @@
+.setDoneButton {
+    color: teal;
+    border: none;
+    background-color: transparent;
+    transition: 0.35s;
+}
+
+.setDoneButton:hover {
+    color: hsl(180, 100%, 35%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.setDoneButton:active {
+    color: hsl(180, 100%, 45%);
+    border: none;
+    background-color: transparent;
+}
+
+.setDoneButton:disabled {
+    border: none;
+    background-color: transparent;
+    color: hsl(0, 0%, 80%);
+    cursor: not-allowed;
+}
+  
+.toggleDoneTasksButton {
+    color: teal;
+    border: none;
+    background-color: transparent;
+    transition: 0.35s;
+}
+
+.toggleDoneTasksButton:hover {
+    color: hsl(180, 100%, 35%);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.toggleDoneTasksButton:active {
+    color: hsl(180, 100%, 45%);
+    border: none;
+    background-color: transparent;
+}
