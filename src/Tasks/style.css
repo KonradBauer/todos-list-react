@@ -5,6 +5,16 @@
   width: 100%;
   grid-gap: 15px;
   margin-bottom: 10px;
+  border-bottom: 1px solid;
+}
+
+.task__item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  grid-gap: 15px;
+  margin-bottom: 10px;
 }
 
 .task--done {
