@@ -1,51 +1,51 @@
 .section__list {
-    list-style-type: none;
-    padding: 0%;
+  list-style-type: none;
+  padding: 0%;
 }
 
 .section__header {
-    font-size: xx-large;
-    font-weight: bold;
-    margin: 0 auto;
+  font-size: xx-large;
+  font-weight: bold;
+  margin: 0 auto;
 }
 
 .section__subHeader {
-    display: flex;
-    max-width: 1000px;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: white;
-    margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 2px;
-    padding: 20px;
-    font-weight: bold;
-    font-size: large;
-    align-items: center;
+  display: flex;
+  max-width: 1000px;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 2px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: large;
+  align-items: center;
 }
 
 .section__header--special {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-self: flex-end;
-    max-width: 1000px;
-    background-color: white;
-    margin: 0 auto;
-    margin-top: 10px;
-    margin-bottom: 2px;
-    padding: 20px;
-    font-weight: bold;
-    font-size: large;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-self: flex-end;
+  max-width: 1000px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 2px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: large;
 }
 
 .sectionBody__taskContainer {
-    max-width: 1000px;
-    background-color: white;
-    margin: 0 auto;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    padding: 30px;
-    font-weight: 400;
-    font-size: large;
+  max-width: 1000px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 30px;
+  font-weight: 400;
+  font-size: large;
 }
