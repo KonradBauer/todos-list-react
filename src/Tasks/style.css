@@ -5,7 +5,7 @@
   width: 100%;
   grid-gap: 15px;
   margin-bottom: 10px;
-  border-bottom: px solid #eee;
+  border-bottom: 2px solid #eee;
 }
 
 .task__item {
