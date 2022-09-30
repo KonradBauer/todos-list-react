@@ -1,8 +1,26 @@
-# Todos List
+# Todos List ✔️
+
+## It's a simple to-do list. Here you can add a task, delete it, complete or hide completed tasks.
+
+## Demo: https://konradbauer.github.io/todos-list-react/
+
+### How to use: 
+
+![animation](https://github.com/KonradBauer/todos-list-react/blob/main/public/todosListReact.gif?raw=true)
+
+### Used technologies:
+<ol>
+<li>JavaScript (ES6)</li>
+<li>create-react-app</li>
+<li>React</li>
+<li>Babel</li>
+<li>JSX</li>
+<li>Hooks</li>
+<li>Controlled Components</li>
+<li>Arrow functions</li>
+</ol>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-https://konradbauer.github.io/todos-list-react/
 
 ## Available Scripts
 
