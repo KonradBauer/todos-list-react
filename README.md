@@ -13,6 +13,7 @@
 <li>JavaScript (ES6)</li>
 <li>create-react-app</li>
 <li>React</li>
+<li>Webpack</li>
 <li>Babel</li>
 <li>JSX</li>
 <li>Hooks</li>
