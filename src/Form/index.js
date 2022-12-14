@@ -13,7 +13,7 @@ const Form = ({ addNewTask }) => {
       return;
     }
 
-    addNewTask(trimmedContentBlock.trim());
+    addNewTask(trimmedContentBlock);
     setNewTaskContent("");
   };
 
