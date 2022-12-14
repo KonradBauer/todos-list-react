@@ -8,6 +8,7 @@ const Form = ({ addNewTask }) => {
     event.preventDefault();
 
     const trimmedContentBlock = newTaskContent.trim();
+
     if (!trimmedContentBlock) {
       return;
     }
