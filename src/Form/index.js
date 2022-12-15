@@ -15,7 +15,6 @@ const Form = ({ addNewTask, tasks, toLocalStorage }) => {
 
     addNewTask(trimmedContentBlock);
     setNewTaskContent("");
-    toLocalStorage();
   };
 
   return (

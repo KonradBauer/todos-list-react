@@ -44,24 +44,18 @@ function App() {
     ]);
   };
 
-  const toLocalStorage = useEffect(() => {
-    {
-      localStorage.setItem("tasks", JSON.stringify(tasks));
-    }
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
+
+  JSON.parse(localStorage.getItem("tasks"));
 
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={
-          <Form
-            addNewTask={addNewTask}
-            toLocalStorage={toLocalStorage}
-            tasks={tasks}
-          />
-        }
+        body={<Form addNewTask={addNewTask} tasks={tasks} />}
       />
 
       <Section
