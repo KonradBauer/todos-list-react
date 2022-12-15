@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "./Form";
 import Tasks from "./Tasks";
 import Buttons from "./Buttons";
@@ -44,12 +44,24 @@ function App() {
     ]);
   };
 
+  const toLocalStorage = useEffect(() => {
+    {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    }
+  }, [tasks]);
+
   return (
     <Container>
       <Header title="Lista zadań" />
       <Section
         title="Dodaj nowe zadanie"
-        body={<Form addNewTask={addNewTask} tasks={tasks} />}
+        body={
+          <Form
+            addNewTask={addNewTask}
+            toLocalStorage={toLocalStorage}
+            tasks={tasks}
+          />
+        }
       />
 
       <Section
