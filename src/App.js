@@ -16,6 +16,7 @@ function App() {
 
   const removeTask = (id) => {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
+    localStorage.removeItem("tasks");
   };
 
   const toggleTaskDone = (id) => {
