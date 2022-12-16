@@ -45,10 +45,16 @@ function App() {
   };
 
   useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
+    if (tasks.length !== 0)
+      localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
 
-  JSON.parse(localStorage.getItem("tasks"));
+  useEffect(() => {
+    const storageData = JSON.parse(localStorage.getItem("tasks"));
+    if (storageData) {
+      setTasks(storageData);
+    }
+  }, []);
 
   return (
     <Container>
