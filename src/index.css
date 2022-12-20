@@ -20,9 +20,10 @@ body {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .form__button {
     width: 100%;
+    display: flex;
   }
 }
 

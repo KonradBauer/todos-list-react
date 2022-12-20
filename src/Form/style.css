@@ -8,7 +8,10 @@
 }
 
 .form__input {
+  display: flex;
+  flex-wrap: nowrap;
   flex-grow: 1;
+  width: 80%;
 }
 
 .form__button {
