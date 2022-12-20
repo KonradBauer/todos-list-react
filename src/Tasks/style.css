@@ -82,6 +82,7 @@
   width: 35px;
   height: 35px;
   border: none;
+  color: #fff;
   background-color: green;
   cursor: pointer;
   transition: 0.35s;
@@ -97,9 +98,10 @@
 }
 
 .button--remove {
-  width: 35px;
+  width: 40px;
   height: 35px;
   border: none;
+  color: #fff;
   background-color: red;
   cursor: pointer;
   display: flex;
