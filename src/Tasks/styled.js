@@ -1,13 +1,6 @@
 import styled, { css } from "styled-components";
 
 export const List = styled.ul`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  grid-gap: 15px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #eee;
   list-style-type: none;
   padding: 0%;
 `;
@@ -19,20 +12,12 @@ export const Item = styled.li`
   width: 100%;
   grid-gap: 15px;
   margin-bottom: 10px;
-  padding: 8px;
+  border-bottom: 2px solid #eee;
 
   ${({ hidden }) =>
     hidden &&
     css`
       display: none;
-    `}
-`;
-
-export const Content = styled.span`
-  ${({ done }) =>
-    done &&
-    css`
-      text-decoration: line-through;
     `}
 `;
 
@@ -57,7 +42,7 @@ export const Button = styled.button`
   ${({ remove }) =>
     remove &&
     css`
-      width: 35px;
+      width: 40px;
       height: 35px;
       border: none;
       color: #fff;
@@ -75,5 +60,21 @@ export const Button = styled.button`
       &:active {
         background-color: hsl(0, 100%, 75%);
       }
+    `}
+`;
+
+export const Task = styled.span`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  grid-gap: 15px;
+  margin-bottom: 10px;
+  padding: 8px;
+
+  ${({ done }) =>
+    done &&
+    css`
+      text-decoration: line-through;
     `}
 `;
