@@ -1,19 +1,25 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const FormWrapper = styled.form`
   display: flex;
   max-width: 1000px;
   background-color: white;
   margin: 0 auto;
   justify-content: space-between;
   grid-gap: 15px;
+
+  @media (max-width: 990px) {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+  }
 `;
 
 export const Input = styled.input`
   display: flex;
-  flex-wrap: nowrap;
   flex-grow: 1;
   width: 80%;
+  padding: 10px;
 `;
 
 export const Button = styled.button`
@@ -24,6 +30,13 @@ export const Button = styled.button`
   color: white;
   padding: 10px;
   transition: 0.35s;
+
+  @media (max-width: 990px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: center;
+  }
 
   &:hover {
     transform: scale(1.125);
