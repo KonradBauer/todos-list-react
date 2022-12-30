@@ -1,17 +1,17 @@
-import { Header, SetDoneButton, ToggleDoneTasksButton } from "./styled";
+import { Header, SetDynamicButton } from "./styled";
 
 const Buttons = ({ tasks, hideDone, toggleHideDone, setAllDone }) =>
   tasks.length > 0 && (
     <Header>
-      <ToggleDoneTasksButton onClick={toggleHideDone}>
+      <SetDynamicButton onClick={toggleHideDone}>
         {!hideDone ? "Ukryj ukończone" : "Pokaż ukończone"}
-      </ToggleDoneTasksButton>
-      <SetDoneButton
+      </SetDynamicButton>
+      <SetDynamicButton
         onClick={setAllDone}
         disabled={tasks.every(({ done }) => done)}
       >
         Ukończ wszystkie
-      </SetDoneButton>
+      </SetDynamicButton>
     </Header>
   );
 
