@@ -24,8 +24,6 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  display: grid;
-  grid-gap: 10px;
   border: none;
   background-color: teal;
   color: white;
@@ -33,7 +31,6 @@ export const Button = styled.button`
   transition: 0.35s;
 
   @media (max-width: 990px) {
-    display: flex;
     flex-wrap: wrap;
     flex-grow: 1;
     justify-content: center;
