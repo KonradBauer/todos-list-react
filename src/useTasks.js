@@ -1,23 +1,16 @@
 import { useState, useEffect } from "react";
 
 const useTasks = () => {
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(
+    JSON.parse(localStorage.getItem("tasks") || [])
+  );
 
   useEffect(() => {
-    if (tasks.length !== 0)
-      localStorage.setItem("tasks", JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
-
-  useEffect(() => {
-    const storageData = JSON.parse(localStorage.getItem("tasks"));
-    if (storageData) {
-      setTasks(storageData);
-    }
-  }, []);
 
   const removeTask = (id) => {
     setTasks((tasks) => tasks.filter((task) => task.id !== id));
-    localStorage.removeItem("tasks");
   };
 
   const toggleTaskDone = (id) => {
