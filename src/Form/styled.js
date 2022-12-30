@@ -7,6 +7,7 @@ export const FormWrapper = styled.form`
   margin: 0 auto;
   justify-content: space-between;
   grid-gap: 15px;
+  padding: 20px;
 
   @media (max-width: 990px) {
     display: flex;
