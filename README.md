@@ -17,6 +17,7 @@
 <li>Babel</li>
 <li>JSX</li>
 <li>Hooks</li>
+<li>Custom Hooks</li>
 <li>Controlled Components</li>
 <li>Arrow functions</li>
 </ol>
