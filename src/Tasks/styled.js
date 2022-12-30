@@ -3,6 +3,14 @@ import styled, { css } from "styled-components";
 export const List = styled.ul`
   list-style-type: none;
   padding: 0%;
+  max-width: 1000px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 30px;
+  font-weight: 400;
+  font-size: large;
 `;
 
 export const Item = styled.li`
