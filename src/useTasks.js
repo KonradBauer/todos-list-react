@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 const useTasks = () => {
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks") || [])
+    JSON.parse(localStorage.getItem("tasks")) || []
   );
 
   useEffect(() => {
