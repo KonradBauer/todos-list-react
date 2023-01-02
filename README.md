@@ -19,6 +19,7 @@
 <li>Hooks</li>
 <li>Custom Hooks</li>
 <li>Controlled Components</li>
+<li>LocalStorage</li>
 <li>Arrow functions</li>
 </ol>
 
