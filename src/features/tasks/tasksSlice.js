@@ -17,8 +17,10 @@ const tasksSlice = createSlice({
       const index = tasks.findIndex(({ id }) => id === payload);
       tasks[index].done = !tasks[index].done;
     },
-    setTasksDone: ({ tasks }) => {
-      tasks.map((task) => ({ ...task, done: true }));
+    setTasksDone: (state) => {
+      state.tasks.forEach((task) => {
+        task.done = true;
+      });
     },
   },
 });
