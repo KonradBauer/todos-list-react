@@ -21,6 +21,7 @@
 <li>Controlled Components</li>
 <li>LocalStorage</li>
 <li>Immutability</li>
+<li>Redux</li>
 <li>Arrow functions</li>
 </ol>
 
