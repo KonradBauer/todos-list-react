@@ -50,11 +50,11 @@ export const Button = styled.button`
   ${({ remove }) =>
     remove &&
     css`
-      width: 40px;
+      width: 35px;
       height: 35px;
       border: none;
       color: #fff;
-      background-color: red;
+      background-color: hsl(0, 100%, 55%);
       cursor: pointer;
       display: flex;
       justify-content: center;
