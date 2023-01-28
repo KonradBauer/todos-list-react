@@ -1,15 +1,15 @@
 import { Header, SetDynamicButton } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 import {
-  selectTasksState,
   toggleHideDone,
   setTasksDone,
   checkTasksDone,
   selectTasksLength,
+  selectHideDone,
 } from "../tasksSlice";
 
 const Buttons = () => {
-  const { tasks, hideDone } = useSelector(selectTasksState);
+  const setDoneButton = useSelector(selectHideDone);
   const buttonDisabled = useSelector(checkTasksDone);
   const isArrayEmpty = useSelector(selectTasksLength);
   const dispatch = useDispatch();
@@ -18,7 +18,7 @@ const Buttons = () => {
     isArrayEmpty && (
       <Header>
         <SetDynamicButton onClick={() => dispatch(toggleHideDone())}>
-          {!hideDone ? "Ukryj ukończone" : "Pokaż ukończone"}
+          {!setDoneButton ? "Ukryj ukończone" : "Pokaż ukończone"}
         </SetDynamicButton>
         <SetDynamicButton
           onClick={() => dispatch(setTasksDone())}
