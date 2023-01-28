@@ -38,7 +38,8 @@ export const {
 } = tasksSlice.actions;
 
 export const selectTasksState = (state) => state.tasks;
-
+export const selectTasksLength = (state) =>
+  selectTasksState(state).tasks.length !== 0;
 export const getTasksArray = (state) => selectTasksState(state).tasks;
 export const checkTasksDone = (state) =>
   getTasksArray(state).every(({ done }) => done);
