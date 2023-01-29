@@ -39,9 +39,9 @@ export const {
 
 export const selectTasksState = (state) => state.tasks;
 export const selectHideDone = (state) => selectTasksState(state).hideDone;
-export const getTasksArray = (state) => selectTasksState(state).tasks;
+export const selectTasksArray = (state) => selectTasksState(state).tasks;
 export const selectTasksLength = (state) =>
   selectTasksState(state).tasks.length !== 0;
-export const checkTasksDone = (state) =>
-  getTasksArray(state).every(({ done }) => done);
+export const selectTasksDone = (state) =>
+  selectTasksArray(state).every(({ done }) => done);
 export default tasksSlice.reducer;
