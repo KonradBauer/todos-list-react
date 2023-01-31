@@ -11,6 +11,6 @@ function* getExampleTasksHandler() {
   }
 }
 
-export function* watchGetExampleTasks() {
+export function* tasksSaga() {
   yield takeLatest(getExampleTasks.type, getExampleTasksHandler);
 }
