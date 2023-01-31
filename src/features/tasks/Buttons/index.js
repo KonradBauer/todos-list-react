@@ -17,9 +17,6 @@ const Buttons = () => {
 
   return (
     <Header>
-      <SetDynamicButton onClick={() => dispatch(getExampleTasks())}>
-        Pobierz przykładowe zadania
-      </SetDynamicButton>
       {isArrayEmpty && (
         <>
           <SetDynamicButton onClick={() => dispatch(toggleHideDone())}>
@@ -33,6 +30,9 @@ const Buttons = () => {
           </SetDynamicButton>
         </>
       )}
+      <SetDynamicButton onClick={() => dispatch(getExampleTasks())}>
+        Pobierz przykładowe zadania
+      </SetDynamicButton>
     </Header>
   );
 };
