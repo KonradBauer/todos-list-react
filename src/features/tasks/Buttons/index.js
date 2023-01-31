@@ -6,6 +6,7 @@ import {
   selectTasksDone,
   selectTasksLength,
   selectHideDone,
+  getExampleTasks,
 } from "../tasksSlice";
 
 const Buttons = () => {
@@ -15,19 +16,24 @@ const Buttons = () => {
   const dispatch = useDispatch();
 
   return (
-    isArrayEmpty && (
-      <Header>
-        <SetDynamicButton onClick={() => dispatch(toggleHideDone())}>
-          {!setDoneButton ? "Ukryj ukończone" : "Pokaż ukończone"}
-        </SetDynamicButton>
-        <SetDynamicButton
-          onClick={() => dispatch(setTasksDone())}
-          disabled={buttonDisabled}
-        >
-          Ukończ wszystkie
-        </SetDynamicButton>
-      </Header>
-    )
+    <Header>
+      <SetDynamicButton onClick={() => dispatch(getExampleTasks())}>
+        Pobierz przykładowe zadania
+      </SetDynamicButton>
+      {isArrayEmpty && (
+        <>
+          <SetDynamicButton onClick={() => dispatch(toggleHideDone())}>
+            {!setDoneButton ? "Ukryj ukończone" : "Pokaż ukończone"}
+          </SetDynamicButton>
+          <SetDynamicButton
+            onClick={() => dispatch(setTasksDone())}
+            disabled={buttonDisabled}
+          >
+            Ukończ wszystkie
+          </SetDynamicButton>
+        </>
+      )}
+    </Header>
   );
 };
 
