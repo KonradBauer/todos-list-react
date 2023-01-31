@@ -26,6 +26,10 @@ const tasksSlice = createSlice({
       const index = tasks.findIndex(({ id }) => id === taskId);
       tasks.splice(index, 1);
     },
+    getExampleTasks: () => {},
+    setExampleTasks: (state, { payload: tasks }) => {
+      state.tasks = tasks;
+    },
   },
 });
 
@@ -35,6 +39,8 @@ export const {
   toggleTaskDone,
   setTasksDone,
   removeTask,
+  getExampleTasks,
+  setExampleTasks,
 } = tasksSlice.actions;
 
 export const selectTasksState = (state) => state.tasks;
