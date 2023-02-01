@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 export const Header = styled.header`
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-self: flex-end;
   max-width: 1000px;
   background-color: white;
   margin: 0 auto;
