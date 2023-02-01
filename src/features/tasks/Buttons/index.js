@@ -6,7 +6,6 @@ import {
   selectTasksDone,
   selectTasksLength,
   selectHideDone,
-  getExampleTasks,
 } from "../tasksSlice";
 
 const Buttons = () => {
@@ -30,9 +29,6 @@ const Buttons = () => {
           </SetDynamicButton>
         </>
       )}
-      <SetDynamicButton onClick={() => dispatch(getExampleTasks())}>
-        Pobierz przykładowe zadania
-      </SetDynamicButton>
     </Header>
   );
 };
