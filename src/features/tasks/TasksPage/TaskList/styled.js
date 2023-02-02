@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
 
 export const List = styled.ul`
   list-style-type: none;
