@@ -51,4 +51,7 @@ export const selectTasksLength = (state) =>
   selectTasksState(state).tasks.length !== 0;
 export const selectTasksDone = (state) =>
   selectTasksArray(state).every(({ done }) => done);
+export const getTaskById = (state, taskId) =>
+  selectTasksArray(state).find(({ id }) => id === taskId);
+
 export default tasksSlice.reducer;
