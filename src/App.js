@@ -9,14 +9,10 @@ export const App = () => (
     <nav>
       <ul>
         <li>
-          <StyledNavLink activeClassName="active" to="/zadania">
-            Zadania
-          </StyledNavLink>
+          <StyledNavLink to="/zadania">Zadania</StyledNavLink>
         </li>
         <li>
-          <StyledNavLink activeClassName="active" to="/autor">
-            O autorze
-          </StyledNavLink>
+          <StyledNavLink to="/autor">O autorze</StyledNavLink>
         </li>
       </ul>
       <Switch>
