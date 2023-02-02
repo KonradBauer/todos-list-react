@@ -1,14 +1,14 @@
 import Form from "./Form";
 import TaskList from "./TaskList";
 import Buttons from "./Buttons";
-import Section from "../../common/Section";
-import Header from "../../common/Header";
-import { Container } from "../../common/Container/styled";
+import Section from "../../../common/Section";
+import Header from "../../../common/Header";
+import { Container } from "../../../common/Container/styled";
 import { useDispatch } from "react-redux";
-import { getExampleTasks } from "./tasksSlice";
+import { getExampleTasks } from "../tasksSlice";
 import { SetDynamicButton } from "./Buttons/styled";
 
-function Tasks() {
+function TasksPage() {
   const dispatch = useDispatch();
 
   return (
@@ -33,4 +33,4 @@ function Tasks() {
   );
 }
 
-export default Tasks;
+export default TasksPage;

@@ -6,7 +6,7 @@ import {
   selectTasksDone,
   selectTasksLength,
   selectHideDone,
-} from "../tasksSlice";
+} from "../../../tasks/tasksSlice";
 
 const Buttons = () => {
   const setDoneButton = useSelector(selectHideDone);
