@@ -1,4 +1,4 @@
-import { HashRouter, Switch, Route, Link, Redirect } from "react-router-dom";
+import { HashRouter, Switch, Route, NavLink, Redirect } from "react-router-dom";
 import Tasks from "./features/tasks/Tasks";
 import Author from "./features/author/Author";
 
@@ -7,10 +7,14 @@ export const App = () => (
     <nav>
       <ul>
         <li>
-          <Link to="/zadania">Zadania</Link>
+          <NavLink activeClassName="active" to="/zadania">
+            Zadania
+          </NavLink>
         </li>
         <li>
-          <Link to="/autor">O autorze</Link>
+          <NavLink activeClassName="active" to="/autor">
+            O autorze
+          </NavLink>
         </li>
       </ul>
       <Switch>
