@@ -20,5 +20,4 @@ export const StyledUl = styled.ul`
   padding: 20px;
   background-color: teal;
   list-style-type: none;
-  color: #eee;
 `;
