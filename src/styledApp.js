@@ -15,9 +15,9 @@ export const StyledNavLink = styled(NavLink)`
 export const StyledUl = styled.ul`
   display: flex;
   justify-content: center;
-  grid-gap: 30px;
+  grid-gap: 40px;
   margin: 0;
-  padding: 15px;
+  padding: 20px;
   background-color: teal;
   list-style-type: none;
   color: #eee;
