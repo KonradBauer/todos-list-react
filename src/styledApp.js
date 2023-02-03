@@ -4,9 +4,21 @@ const activeClassName = "active";
 
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
+  color: #eee;
 
   &.${activeClassName} {
     font-weight: bold;
-    color: black;
+    color: #eee;
   }
+`;
+
+export const StyledUl = styled.ul`
+  display: flex;
+  justify-content: center;
+  grid-gap: 30px;
+  margin: 0;
+  padding: 15px;
+  background-color: teal;
+  list-style-type: none;
+  color: #eee;
 `;
