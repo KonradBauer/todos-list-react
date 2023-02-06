@@ -5,7 +5,7 @@ import AuthorPage from "./features/author/AuthorPage";
 import { StyledNavLink, StyledUl } from "./styledApp";
 
 export const App = () => (
-  <HashRouter>
+  <HashRouter basename="todos-list-react">
     <nav>
       <StyledUl>
         <li>
