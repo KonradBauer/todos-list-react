@@ -11,7 +11,12 @@ function TaskPage() {
   const handleTaskError = "Nie znaleziono takiego zadania 😥";
 
   if (!task) {
-    return handleTaskError;
+    return (
+      <Container>
+        <Header title="Szczegóły zadania" />
+        <Section title={handleTaskError} />
+      </Container>
+    );
   }
 
   return (
