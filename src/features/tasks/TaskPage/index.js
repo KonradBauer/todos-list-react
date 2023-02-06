@@ -1,5 +1,6 @@
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
+import { Wrapper } from "../TasksPage/Search/styled";
 import { Container } from "../../../common/Container/styled";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -22,15 +23,11 @@ function TaskPage() {
   return (
     <Container>
       <Header title="Szczegóły zadania" />
-      <Section
-        title={task ? task.content : handleTaskError}
-        body={
-          <>
-            <strong>Ukończono: </strong>
-            {task.done ? "Tak" : "Nie"}
-          </>
-        }
-      />
+      <Section title={task ? task.content : handleTaskError} />
+      <Wrapper>
+        <strong>Ukończono: </strong>
+        {task.done ? "Tak" : "Nie"}
+      </Wrapper>
     </Container>
   );
 }
