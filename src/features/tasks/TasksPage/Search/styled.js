@@ -10,5 +10,5 @@ export const Wrapper = styled.div`
   margin-bottom: 2px;
   padding: 20px;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 16px;
 `;
