@@ -47,11 +47,26 @@ export const {
 export const selectTasksState = (state) => state.tasks;
 export const selectHideDone = (state) => selectTasksState(state).hideDone;
 export const selectTasksArray = (state) => selectTasksState(state).tasks;
+
 export const selectTasksLength = (state) =>
   selectTasksState(state).tasks.length !== 0;
+
 export const selectTasksDone = (state) =>
   selectTasksArray(state).every(({ done }) => done);
+
 export const getTaskById = (state, taskId) =>
   selectTasksArray(state).find(({ id }) => id === taskId);
+
+export const searchTasksByQuery = (state, query) => {
+  const tasks = selectTasksArray(state);
+
+  if (!query || query.trim() === "") {
+    return tasks;
+  }
+
+  return tasks.filter(({ content }) =>
+    content.toUpperCase().includes(query.toUpperCase().trim())
+  );
+};
 
 export default tasksSlice.reducer;

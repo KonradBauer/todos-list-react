@@ -3,6 +3,7 @@ import TaskList from "./TaskList";
 import Buttons from "./Buttons";
 import Section from "../../../common/Section";
 import Header from "../../../common/Header";
+import Search from "./Search";
 import { Container } from "../../../common/Container/styled";
 import { useDispatch } from "react-redux";
 import { getExampleTasks } from "../tasksSlice";
@@ -23,6 +24,8 @@ function TasksPage() {
           </SetDynamicButton>
         }
       />
+
+      <Section title="Wyszukiwarka" body={<Search />} />
 
       <Section
         title="Lista zadań"
