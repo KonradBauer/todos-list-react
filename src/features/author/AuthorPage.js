@@ -12,7 +12,9 @@ export default () => (
       body={
         <>
           <p>
-            <img src={photo} alt="Konrad Bauer" />
+            <Wrapper>
+              <img src={photo} alt="Konrad Bauer" />
+            </Wrapper>
           </p>
           <p>
             <Wrapper>
