@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   margin: 3px auto;
   margin-bottom: 2px;
   padding: 20px;
-  font-weight: bold;
+  font-weight: normal;
   font-size: 16px;
+  grid-gap: 3px;
 `;
