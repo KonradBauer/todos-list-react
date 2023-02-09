@@ -4,7 +4,7 @@ import {
   setExampleTasks,
   selectTasksArray,
 } from "./tasksSlice";
-import { downloadExampleTasks } from "./getExampleTasks";
+import { downloadExampleTasks } from "./downloadExampleTasks";
 import { saveTasksInLocalStorage } from "./tasksLocalStorage";
 
 function* getExampleTasksHandler() {
