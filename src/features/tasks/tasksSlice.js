@@ -50,8 +50,6 @@ export const {
 
 export const selectTasksState = (state) => state.tasks;
 
-export const selectLoading = (state) => state.loadingStatus;
-
 export const selectHideDone = (state) => selectTasksState(state).hideDone;
 
 export const selectTasksArray = (state) => selectTasksState(state).tasks;
