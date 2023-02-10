@@ -27,7 +27,6 @@
 <li>React-loader-spinner library</li>
 <li>Styled components</li>
 <li>Arrow functions</li>
-<li>Local-storage tasks save</li>  
 <li>npm</li>
 </ol>
 
