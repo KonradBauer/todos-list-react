@@ -5,12 +5,18 @@ import Section from "../../../common/Section";
 import Header from "../../../common/Header";
 import Search from "./Search";
 import { Container } from "../../../common/Container/styled";
-import { useDispatch } from "react-redux";
-import { getExampleTasks } from "../tasksSlice";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getExampleTasks,
+  selectLoadingStatus,
+  selectTasksArray,
+} from "../tasksSlice";
 import { SetDynamicButton } from "./Buttons/styled";
 
 function TasksPage() {
   const dispatch = useDispatch();
+  const loadingStatus = useSelector(selectLoadingStatus);
+  const tasksStatus = useSelector(selectTasksArray);
 
   return (
     <Container>
@@ -20,7 +26,7 @@ function TasksPage() {
         body={<Form />}
         extraHeaderContent={
           <SetDynamicButton onClick={() => dispatch(getExampleTasks())}>
-            Pobierz przykładowe zadania
+            {loadingStatus ? "Ładowanie..." : "Pobierz przykładowe zadania"}
           </SetDynamicButton>
         }
       />
