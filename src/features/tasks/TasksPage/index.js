@@ -8,6 +8,7 @@ import { Container } from "../../../common/Container/styled";
 import { useDispatch, useSelector } from "react-redux";
 import { getExampleTasks, selectLoadingStatus } from "../tasksSlice";
 import { SetDynamicButton } from "./Buttons/styled";
+import { RotatingLines } from "react-loader-spinner";
 
 function TasksPage() {
   const dispatch = useDispatch();
@@ -24,7 +25,17 @@ function TasksPage() {
             disabled={loadingStatus}
             onClick={() => dispatch(getExampleTasks())}
           >
-            {loadingStatus ? "Ładowanie..." : "Pobierz przykładowe zadania"}
+            {loadingStatus ? (
+              <RotatingLines
+                strokeColor="teal"
+                strokeWidth="5"
+                animationDuration="0.75"
+                width="15"
+                visible={true}
+              />
+            ) : (
+              "Pobierz przykładowe zadania"
+            )}
           </SetDynamicButton>
         }
       />
