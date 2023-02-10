@@ -28,7 +28,7 @@ export const Button = styled.button`
   background-color: teal;
   color: white;
   padding: 10px;
-  transition: 0.35s;
+  transition: 0.25s;
 
   @media (max-width: 990px) {
     flex-wrap: wrap;
@@ -37,7 +37,7 @@ export const Button = styled.button`
   }
 
   &:hover {
-    transform: scale(1.125);
+    transform: scale(1.085);
     border: none;
     background-color: hsl(180, 100%, 35%);
     color: white;
