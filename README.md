@@ -1,6 +1,6 @@
 # Todos List ✔️
 
-## It's a simple to-do list. Here you can add a task, delete it, complete or hide completed tasks.
+## It's a simple to-do list. Here you can add a task, delete it, complete or hide completed tasks. In addition, you can check the details of the task if you click on it. The app also allows you to filter tasks by content. You can also check the author information on the subpage. Also u can download template tasks from inside implemented Json. It's the single page application.
 
 ## Demo: https://konradbauer.github.io/todos-list-react/
 
@@ -22,7 +22,12 @@
 <li>LocalStorage</li>
 <li>Immutability</li>
 <li>Redux</li>
+<li>Saga</li>
+<li>React-Router</li>
+<li>React-loader-spinner library</li>
+<li>Styled components</li>
 <li>Arrow functions</li>
+<li>npm</li>
 </ol>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
