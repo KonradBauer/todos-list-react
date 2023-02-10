@@ -6,11 +6,7 @@ import Header from "../../../common/Header";
 import Search from "./Search";
 import { Container } from "../../../common/Container/styled";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  getExampleTasks,
-  selectLoadingStatus,
-  selectTasksArray,
-} from "../tasksSlice";
+import { getExampleTasks, selectLoadingStatus } from "../tasksSlice";
 import { SetDynamicButton } from "./Buttons/styled";
 
 function TasksPage() {
@@ -24,7 +20,10 @@ function TasksPage() {
         title="Dodaj nowe zadanie"
         body={<Form />}
         extraHeaderContent={
-          <SetDynamicButton onClick={() => dispatch(getExampleTasks())}>
+          <SetDynamicButton
+            disabled={loadingStatus}
+            onClick={() => dispatch(getExampleTasks())}
+          >
             {loadingStatus ? "Ładowanie..." : "Pobierz przykładowe zadania"}
           </SetDynamicButton>
         }
