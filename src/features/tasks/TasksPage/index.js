@@ -16,7 +16,6 @@ import { SetDynamicButton } from "./Buttons/styled";
 function TasksPage() {
   const dispatch = useDispatch();
   const loadingStatus = useSelector(selectLoadingStatus);
-  const tasksStatus = useSelector(selectTasksArray);
 
   return (
     <Container>
