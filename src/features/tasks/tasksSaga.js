@@ -8,7 +8,7 @@ import {
 } from "redux-saga/effects";
 import {
   getExampleTasks,
-  setExampleTasks,
+  setExampleTasksAndLoading,
   selectTasksArray,
 } from "./tasksSlice";
 import { downloadExampleTasks } from "./downloadExampleTasks";
@@ -18,7 +18,7 @@ function* getExampleTasksHandler() {
   try {
     yield delay(1000);
     const exampleTasks = yield call(downloadExampleTasks);
-    yield put(setExampleTasks(exampleTasks));
+    yield put(setExampleTasksAndLoading(exampleTasks));
   } catch (error) {
     yield call(alert, "Ups, coś poszło nie tak!");
   }

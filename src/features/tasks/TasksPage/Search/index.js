@@ -8,6 +8,7 @@ export default () => {
   const history = useHistory();
   const location = useLocation();
   const query = useQueryParameter(searchQueryParamName);
+
   const onInputChange = ({ target }) => {
     const searchParams = new URLSearchParams(location.search);
 
