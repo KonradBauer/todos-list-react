@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import searchQueryParamName from "./searchQueryParamName";
 
 export const useQueryParameter = () => {
@@ -14,4 +15,18 @@ export const useQueryParameter = () => {
   return query;
 };
 
-export const useReplaceQueryParameter = () => {};
+export const useReplaceQueryParameter = () => {
+  const location = useLocation();
+  const query = new URLSearchParams(location.search).get(searchQueryParamName);
+  const history = useHistory();
+
+  const replaceQueryParameter = () => {
+    if (query === "") {
+      query.delete(searchQueryParamName);
+    } else {
+      history.replace(`${location.pathname}?${query}`);
+    }
+  };
+
+  return replaceQueryParameter;
+};
