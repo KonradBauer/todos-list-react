@@ -24,7 +24,7 @@ export const useReplaceQueryParameter = () => {
     if (query === "") {
       query.delete(searchQueryParamName);
     } else {
-      history.replace(`${location.pathname}?${query}`);
+      history.replace(`${location.pathname}?${searchQueryParamName}`);
     }
   };
 
