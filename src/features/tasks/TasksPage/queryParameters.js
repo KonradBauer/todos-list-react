@@ -8,8 +8,8 @@ export const useQueryParameter = () => {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    setQuery(searchParams.get(searchQueryParamName));
+    const search = new URLSearchParams(location.search);
+    setQuery(search.get(searchQueryParamName));
   }, [location, searchQueryParamName]);
 
   return query;
@@ -17,15 +17,16 @@ export const useQueryParameter = () => {
 
 export const useReplaceQueryParameter = () => {
   const location = useLocation();
-  const query = new URLSearchParams(location.search).get(searchQueryParamName);
+  const search = new URLSearchParams(location.search);
   const history = useHistory();
 
-  const replaceQueryParameter = () => {
-    if (query === "") {
-      query.delete(searchQueryParamName);
+  const replaceQueryParameter = ({ key, value }) => {
+    if (value === "") {
+      search.delete(key);
     } else {
-      history.replace(`${location.pathname}?${searchQueryParamName}`);
+      search.set(key, value);
     }
+    history.replace(`${location.pathname}?${search.toString()}`);
   };
 
   return replaceQueryParameter;

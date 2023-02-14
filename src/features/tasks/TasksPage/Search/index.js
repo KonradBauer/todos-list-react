@@ -13,7 +13,7 @@ export default () => {
   const onInputChange = ({ target }) => {
     replaceQueryParameter({
       key: searchQueryParamName,
-      value: target.value.trim() !== "" ? target.value : undefined,
+      value: target.value.trim() !== "" ? target.value : "",
     });
   };
 
