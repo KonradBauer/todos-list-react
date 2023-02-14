@@ -9,6 +9,7 @@ export const useQueryParameter = () => {
 
   useEffect(() => {
     const search = new URLSearchParams(location.search);
+
     setQuery(search.get(searchQueryParamName));
   }, [location, searchQueryParamName]);
 
@@ -26,6 +27,7 @@ export const useReplaceQueryParameter = () => {
     } else {
       search.set(key, value);
     }
+
     history.replace(`${location.pathname}?${search.toString()}`);
   };
 
