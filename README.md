@@ -22,6 +22,7 @@
 <li>LocalStorage</li>
 <li>Immutability</li>
 <li>Redux</li>
+<li>Redux-toolkit</li>
 <li>Saga</li>
 <li>React-Router</li>
 <li>React-loader-spinner library</li>
