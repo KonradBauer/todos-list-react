@@ -10,6 +10,7 @@ import {
   getExampleTasks,
   setExampleTasksAndLoading,
   selectTasksArray,
+  setExampleTasksError,
 } from "./tasksSlice";
 import { downloadExampleTasks } from "./downloadExampleTasks";
 import { saveTasksInLocalStorage } from "./tasksLocalStorage";
@@ -20,6 +21,7 @@ function* getExampleTasksHandler() {
     const exampleTasks = yield call(downloadExampleTasks);
     yield put(setExampleTasksAndLoading(exampleTasks));
   } catch (error) {
+    yield put(setExampleTasksError());
     yield call(alert, "Ups, coś poszło nie tak!");
   }
 }
