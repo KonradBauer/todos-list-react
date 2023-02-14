@@ -9,13 +9,12 @@ import { getTaskById } from "../tasksSlice";
 function TaskPage() {
   const { id } = useParams();
   const task = useSelector((state) => getTaskById(state, id));
-  const handleTaskError = "Nie znaleziono takiego zadania 😥";
 
   if (!task) {
     return (
       <Container>
         <Header title="Szczegóły zadania" />
-        <Section title={handleTaskError} />
+        <Section title="Nie znaleziono takiego zadania 😥" />
       </Container>
     );
   }
@@ -23,7 +22,7 @@ function TaskPage() {
   return (
     <Container>
       <Header title="Szczegóły zadania" />
-      <Section title={task ? task.content : handleTaskError} />
+      <Section title={task ? task.content : ""} />
       <Wrapper>
         <strong>Ukończono: </strong>
         {task.done ? "Tak" : "Nie"}
