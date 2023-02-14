@@ -22,7 +22,7 @@ function* getExampleTasksHandler() {
     yield put(setExampleTasksAndLoading(exampleTasks));
   } catch (error) {
     yield put(setExampleTasksError());
-    yield call(alert, "Ups, coś poszło nie tak!");
+    yield call(alert, "Ups, coś poszło nie tak! Spróbuj jeszcze raz!");
   }
 }
 
