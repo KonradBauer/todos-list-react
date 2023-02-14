@@ -12,7 +12,7 @@ export const Header = styled.div`
   }
 `;
 
-export const SetDynamicButton = styled.button`
+export const DynamicButton = styled.button`
   color: teal;
   border: none;
   background-color: transparent;

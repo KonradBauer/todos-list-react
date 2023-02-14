@@ -1,4 +1,4 @@
-import { Header, SetDynamicButton } from "./styled";
+import { Header, DynamicButton } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 import {
   toggleHideDone,
@@ -18,15 +18,15 @@ const Buttons = () => {
     <Header>
       {isArrayEmpty && (
         <>
-          <SetDynamicButton onClick={() => dispatch(toggleHideDone())}>
+          <DynamicButton onClick={() => dispatch(toggleHideDone())}>
             {!setDoneButton ? "Ukryj ukończone" : "Pokaż ukończone"}
-          </SetDynamicButton>
-          <SetDynamicButton
+          </DynamicButton>
+          <DynamicButton
             onClick={() => dispatch(setTasksDone())}
             disabled={buttonDisabled}
           >
             Ukończ wszystkie
-          </SetDynamicButton>
+          </DynamicButton>
         </>
       )}
     </Header>
