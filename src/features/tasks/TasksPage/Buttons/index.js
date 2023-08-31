@@ -6,7 +6,7 @@ import {
   selectTasksDone,
   selectTasksLength,
   selectHideDone,
-} from "../../../tasks/tasksSlice";
+} from "../../tasksSlice";
 
 const Buttons = () => {
   const setDoneButton = useSelector(selectHideDone);
@@ -21,10 +21,7 @@ const Buttons = () => {
           <DynamicButton onClick={() => dispatch(toggleHideDone())}>
             {!setDoneButton ? "Ukryj ukończone" : "Pokaż ukończone"}
           </DynamicButton>
-          <DynamicButton
-            onClick={() => dispatch(setTasksDone())}
-            disabled={buttonDisabled}
-          >
+          <DynamicButton onClick={() => dispatch(setTasksDone())} disabled={buttonDisabled}>
             Ukończ wszystkie
           </DynamicButton>
         </>
